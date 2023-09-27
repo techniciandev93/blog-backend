@@ -62,14 +62,17 @@
                 {% endif %}
                 <ul class="thumb-info" style="max-width: 550px;">
                   <li><a href="{% url 'post_detail' slug=post.slug %}"><i class="ti-user"></i>{{post.author}}</a></li>
-                  <li><a href="{% url 'post_detail' slug=post.slug %}"><i class="ti-notepad"></i>{{post.published_at}}</a></li>
-                  <li><a href="{% url 'post_detail' slug=post.slug %}"><i class="ti-themify-favicon"></i>{{post.comments_amount}} Comments</a></li>
+                  <li><a href="{% url 'post_detail' slug=post.slug %}"><i class="ti-notepad"></i>{{post.published_at}}</a>
+                  </li>
+                  <li><a href="{% url 'post_detail' slug=post.slug %}"><i class="ti-themify-favicon"></i>{{post.comments_amount}}
+                  Comments</a></li>
                 </ul>
               </div>
               <div class="details mt-20">
-                <h3>{{post.title}}</h3>
-                <p>{{post.text | truncatechars:200 }}</p>
-                <a class="button" href="{% url 'post_detail' slug=post.slug %}">Read More <i class="ti-arrow-right"></i></a>
+              <h3>{{post.title}}</h3>
+              <p>{{post.text | truncatechars:200 }}</p>
+              <a class="button" href="{% url 'post_detail' slug=post.slug %}">Read More <i
+                class="ti-arrow-right"></i></a>
               </div>
             </div>
           {% endfor %}
@@ -106,8 +109,9 @@
               <h4 class="single-sidebar-widget__title">Newsletter</h4>
               <div class="form-group mt-30">
                 <div class="col-autos">
-                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'Enter email'">
+                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email"
+                         onfocus="this.placeholder = ''"
+                         onblur="this.placeholder = 'Enter email'">
                 </div>
               </div>
               <button class="bbtns d-block mt-20 w-100">Subcribe</button>
